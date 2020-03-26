@@ -32,4 +32,8 @@ Version two now has a dedicated cell for the global variables, the ones that are
 
 Version three adds in a rough double veto and double coincidence triggers.  These triggers have not yet been testeed, and most likely will contain errors or bugs.
 
-Version four will be primarily for testing the triggers one by one.  In this version the data saving will be altered to save specific events rather than just mass amounts of data surrounding an event.
+Version four will be primarily for testing the triggers one by one.
+The negative trigger saves all data taken if neither trigger was activated.
+If a channel was triggered then no data is saved.
+The veto trigger saves all data if channel one was triggered, but channel two was not triggered.  
+If channel one was not triggered or if channel two was triggered, no data is saved.
