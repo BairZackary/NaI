@@ -26,7 +26,7 @@ The zackary bair radioactive tests folder contains the module that the scope use
 
 Versions for the software:
 
-Vrsion one has a rough version of the negative, veto, and coincidence triggers.
+Version one has a rough version of the negative, veto, and coincidence triggers.
 
 Version two now has a dedicated cell for the global variables, the ones that are commonly chaanged.  In the final version, all changable variables will be here.  This version was the first one hooked up directly to the detectors and used to take experimental data.  The data was to test the functionality of the triggers.
 
@@ -37,3 +37,10 @@ The negative trigger saves all data taken if neither trigger was activated.
 If a channel was triggered then no data is saved.
 The veto trigger saves all data if channel one was triggered, but channel two was not triggered.  
 If channel one was not triggered or if channel two was triggered, no data is saved.
+The double veto trigger currently has an error that will enter into an infinite while loop. 
+The error takes place it seems during the plotting.  It plots the first three subplots then does nothing else.
+The coincidence trigger saves data if channel one was triggered, and then within the coincidence window, channel two was also triggered.
+If channel one was not triggered or if channel two was not triggered within the window then no data will be saved.
+The double coincidence trigger currently has an error that it will enter into an infinite while loop.
+The error takes place it seems during the plotting.  It plots the first three subplots then does nothing else.
+This error seems to be the same error that the double veto trigger has, suggesting it is caused by something in common between these two.
