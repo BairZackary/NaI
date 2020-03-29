@@ -50,6 +50,7 @@ This new algorithm will focus on saving data from all events, not just the large
 The data saving is already a function so the modification to the data saving for events should not be to drastic.
 Along with the new data saving, the time on the data should be changed.
 Added a global variable called TRIGGER_WINDOW that is the timespan spent looking for vetos.
+The COINCIDENCE_WINDOW was renamed to EVENT_WINDOW.
 After all triggers have the data saving modified, there should be no use for channelOneMax and channelTwoMax.
 The negative trigger does not get modified as it is made to save all data.
 The veto trigger now goes through all points and looks for events.
@@ -66,5 +67,7 @@ Fixing this error will mean removing the else statement and moving what was insi
 These changes were made, and there is still an error except this time the keyboard interupt points to the if statement containing the saveData function call.
 The error in the double veto trigger has now been fixed.
 A similar fix will later be applied to the double coincidence trigger.
+The double vero trigger now goes through all points and looks for events.
+These events are then saved.
 Aside from the difference in saving data, version five also changed the run time.
 The magic number * 2 in the control loop was replaced with a minute modifier in the globals cell.
