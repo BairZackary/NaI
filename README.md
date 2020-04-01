@@ -69,5 +69,7 @@ The error in the double veto trigger has now been fixed.
 A similar fix will later be applied to the double coincidence trigger.
 The double vero trigger now goes through all points and looks for events.
 These events are then saved.
+The coincidence trigger now goes through all points and looks for events.
+These events are then saved.
 Aside from the difference in saving data, version five also changed the run time.
 The magic number * 2 in the control loop was replaced with a minute modifier in the globals cell.
